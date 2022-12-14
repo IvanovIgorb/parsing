@@ -67,24 +67,24 @@ parsing($page1);
 
 //Вторая страница
 $curl = curl_init($url);
-
 curl_setopt(
 	$curl,
-CURLOPT_HTTPHEADER,
-	array(
-		"Accept: */*",
-		"Accept-Language: ru,en;q=0.9",
-		"Cache-Control: no-cache",
-		"Connection: keep-alive",
-		"Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
-		"Cookie: __ddg1_=CUFd7KhERRlzxX3YRvW9; _ym_uid=1670529085873414345; _ym_d=1670529085; ASP.NET_SessionId=02e5mymshg5lliydiupp0if5; _ym_isad=1",
-		"Origin: http://www.arbitat.ru",
-		"Referer: http://www.arbitat.ru/",
-		"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 YaBrowser/22.11.2.807 Yowser/2.5 Safari/537.36",
-		"X-MicrosoftAjax: Delta=true",
-		"X-Requested-With: XMLHttpRequest",
+	CURLOPT_HTTPHEADER,
+		array(
+	"POST",
+	"Accept: */*",
+	"Accept-Language: ru,en;q=0.9,en-GB;q=0.8,en-US;q=0.7",
+	"Connection: keep-alive",
+	"Content-Length: 0",
+	"Content-Type: application/json; charset=UTF-8",
+	"Cookie: __ddg1_=TEhOvzby0N5n8iaahJQ7; ASP.NET_SessionId=tgg3me0kgrsvfmkca54eyoq0; _ym_uid=167101136113241122; _ym_d=1671011361; _ym_isad=2",
+	"Origin: http://www.arbitat.ru",
+	"Referer: http://www.arbitat.ru/",
+	"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.46",
+	"X-Requested-With: XMLHttpRequest",
 	)
-);
+); 
+
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $page2 = curl_exec($curl);
 curl_close($curl);
